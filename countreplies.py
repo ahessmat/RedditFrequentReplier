@@ -45,6 +45,8 @@ most_active_commenters = get_most_active_commenters(subreddit, header_name, days
 
 sorted_commenters = sorted(most_active_commenters.items(), key=lambda x: x[1], reverse=True)
 top_10 = sorted_commenters[:10]
+print(f'In the last {days} days...')
+print(f'The Total Number of Mentors is: {len(most_active_commenters)}')
 print('The Most Active Mentors by Total Replies is:')
 for key,value in top_10:
     print(f'{key}: {value}')
